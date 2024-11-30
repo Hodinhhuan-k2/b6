@@ -1,0 +1,15 @@
+print("Hồ Đình Huân")
+print("MSSV:235752021610049")
+class Hinhchunhat:
+    def __init__(self, chieu_dai, chieu_rong):
+        self.chieu_dai = chieu_dai  # Chiều dài của hình chữ nhật
+        self.chieu_rong = chieu_rong  # Chiều rộng của hình chữ nhật
+
+    def tinh_dien_tich(self):
+        return self.chieu_dai * self.chieu_rong  # Công thức tính diện tích hình chữ nhật
+
+# Tạo một đối tượng của class Hinhchunhat
+hcn = Hinhchunhat(5, 3)
+
+# In ra diện tích của hình chữ nhật
+print("Diện tích hình chữ nhật:", hcn.tinh_dien_tich())
