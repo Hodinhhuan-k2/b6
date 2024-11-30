@@ -1,0 +1,23 @@
+print("Hồ Đình Huân")
+print("MSSV:235752021610049")
+class ReverseWords:
+    def __init__(self, input_string):
+        self.input_string = input_string
+
+    def reverse(self):
+        # Tách chuỗi thành danh sách các từ
+        words = self.input_string.split()
+        # Đảo ngược thứ tự các từ
+        reversed_words = words[::-1]
+        # Nối các từ lại với nhau và trả về kết quả
+        return ' '.join(reversed_words)
+
+# Dữ liệu vào
+input_string = 'hello .py'
+
+# Sử dụng lớp ReverseWords
+reverse_instance = ReverseWords(input_string)
+
+# Gọi phương thức reverse và in kết quả
+output_string = reverse_instance.reverse()
+print(output_string)
