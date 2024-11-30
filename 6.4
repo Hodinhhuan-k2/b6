@@ -1,0 +1,40 @@
+print("Hồ Đình Huân")
+print("MSSV:235752021610049")
+class RomanToInt:
+    def __init__(self):
+        # Tạo một dictionary chứa các ký tự La Mã và giá trị tương ứng
+        self.roman_map = {
+            'I': 1,
+            'V': 5,
+            'X': 10,
+            'L': 50,
+            'C': 100,
+            'D': 500,
+            'M': 1000
+        }
+
+    def convert(self, roman):
+        total = 0
+        length = len(roman)
+        
+        for i in range(length):
+            # Lấy giá trị của ký tự hiện tại
+            current_value = self.roman_map[roman[i]]
+            
+            # Nếu ký tự hiện tại có giá trị nhỏ hơn ký tự tiếp theo, trừ đi
+            if i + 1 < length and current_value < self.roman_map[roman[i + 1]]:
+                total -= current_value
+            else:
+                total += current_value
+        
+        return total
+
+# Sử dụng lớp RomanToInt
+roman_converter = RomanToInt()
+
+# Nhập vào một số La Mã
+roman_number = input("Nhập số La Mã: ")
+
+# Chuyển đổi và in ra kết quả
+integer_value = roman_converter.convert(roman_number)
+print(f"Số nguyên tương ứng: {integer_value}")
