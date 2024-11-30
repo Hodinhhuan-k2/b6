@@ -1,0 +1,20 @@
+print("Hồ Đình Huân")
+print("MSSV:235752021610049")
+class Nguoi(object):
+    def getGender(self):
+        return "Unknown"
+
+class Nam(Nguoi):
+    def getGender(self):
+        return "Nam"
+
+class Nu(Nguoi):
+    def getGender(self):
+        return "Nữ"
+
+# Code by Quantrimang.com
+aNam = Nam()
+aNu = Nu()
+
+print(aNam.getGender())  # Output: Nam
+print(aNu.getGender())   # Output: Nữ
